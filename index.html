@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Erick Almeida | Portfólio</title>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#Início" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="Projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#Contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="início" class="cabecalho">
+        <img src="img/Imagem do WhatsApp de 2025-02-26 à(s) 00.29.17_bc44e663.jpg" class="foto-perfil">
+        <h1>Erick Almeida</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Front-End Iniciante</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Erick Almeida é um entusiasta de tecnologia e aspirante a desenvolvedor front-end, atualmente cursando
+                Análise e Desenvolvimento de Sistemas. Com foco em HTML, CSS e JavaScript, ele está dedicado a aprender
+                as melhores práticas para criar interfaces web responsivas e acessíveis. Erick está explorando
+                ferramentas como React e Bootstrap para expandir suas habilidades e contribuir para projetos inovadores.
+                Com uma mentalidade de aprendizado contínuo, ele busca transformar ideias em experiências digitais
+                significativas.
+
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="./img/tempo.webp" alt="projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Previsão do Tempo</h3>
+                    <p class="paragrafo-projetos">App moderno para acompanhar as previsões do tempo.</p>
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/calculadora.jpg" alt="projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+
+                    <h3 class="info-projetos">Calculadora Precisa</h3>
+                    <p class="paragrafo-projetos">App de calculadora moderna para efetuar seus cálculos.</p>
+                </div>
+
+            </div>
+
+
+            <div class="projetos-card">
+                <img src="./img/login.avif" alt="projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Tela de Login</h3>
+                    <p class="paragrafo-projetos">Tela de login moderna para seus sites.</p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="Contato" class="contato">
+        <h2 class="contato-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="EnviarWhats(event)">
+
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="Nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="Mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+
+        </form>
+
+
+    </section>
+
+    <script>
+
+        function EnviarWhats(event) {
+
+            event.preventDefault()
+            const nome = document.getElementById('nome')
+            const mensagem = document.getElementById('mensagem')
+            const telefone = '5511985658712'
+
+            const texto = `Olá, meu nome é ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            console.log(url)
+
+            window.open(url, '_blanck')
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

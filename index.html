@@ -9,28 +9,18 @@
 </head>
 
 <body>
-
     <div class="particulas"></div>
-
 
     <nav class="navegacao">
         <ul class="menu">
-            <li>
-                <a href="#Início" class="menu-link">Início</a>
-            </li>
-            <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
-            </li>
-            <li>
-                <a href="Projetos" class="menu-link">Projetos</a>
-            </li>
-            <li>
-                <a href="#Contato" class="menu-link">Contato</a>
-            </li>
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contato" class="menu-link">Contato</a></li>
         </ul>
     </nav>
 
-    <main id="início" class="cabecalho">
+    <main id="inicio" class="cabecalho">
         <img src="img/Imagem do WhatsApp de 2025-02-26 à(s) 00.29.17_bc44e663.jpg" class="foto-perfil">
         <h1>Erick Almeida</h1>
         <p class="cabecalho-sub-titulo">Desenvolvedor Front-End Iniciante</p>
@@ -46,7 +36,6 @@
                 ferramentas como React e Bootstrap para expandir suas habilidades e contribuir para projetos inovadores.
                 Com uma mentalidade de aprendizado contínuo, ele busca transformar ideias em experiências digitais
                 significativas.
-
             </p>
         </div>
     </section>
@@ -55,81 +44,60 @@
         <h2 class="projetos-titulo">Meus Projetos</h2>
         <div class="projetos-caixa">
 
-            <div class="projetos-card">
-                <img src="./img/tempo.webp" alt="projeto 1" class="projetos-imagem">
+            <a href="https://erickalmeidadeoliveira.github.io/clone-starbucks/" target="_blank" class="projetos-card">
+                <img src="./img/clone starbucks.jpg" alt="projeto-1" class="projetos-imagem">
                 <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">Previsão do Tempo</h3>
-                    <p class="paragrafo-projetos">App moderno para acompanhar as previsões do tempo.</p>
+                    <h3 class="info-projetos">Site Starbucks</h3>
+                    <p class="paragrafo-projetos">Site moderno com animações, feito com HTML, CSS e JS.</p>
                 </div>
+            </a>
 
-            </div>
-
-            <div class="projetos-card">
-                <img src="./img/calculadora.jpg" alt="projeto 1" class="projetos-imagem">
+            <a href="https://erickalmeidadeoliveira.github.io/personal-trainer-site/" target="_blank"
+                class="projetos-card">
+                <img src="./img/site personal.jpg" alt="projeto 2" class="projetos-imagem">
                 <div class="caixa-textos-projeto">
-
-                    <h3 class="info-projetos">Calculadora Precisa</h3>
-                    <p class="paragrafo-projetos">App de calculadora moderna para efetuar seus cálculos.</p>
+                    <h3 class="info-projetos">Site Personal Trainer</h3>
+                    <p class="paragrafo-projetos">Site moderno para personal trainer com animações, feito com HTML, CSS
+                        e JS.</p>
                 </div>
+            </a>
 
-            </div>
-
-
-            <div class="projetos-card">
-                <img src="./img/login.avif" alt="projeto 1" class="projetos-imagem">
+            <a href="https://erickalmeidadeoliveira.github.io/trabalho-facul/" target="_blank" class="projetos-card">
+                <img src="./img/Trabalho Faculdade.jpg" alt="projeto 3" class="projetos-imagem">
                 <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">Tela de Login</h3>
-                    <p class="paragrafo-projetos">Tela de login moderna para seus sites.</p>
+                    <h3 class="info-projetos">Site Trabalho da Faculdade</h3>
+                    <p class="paragrafo-projetos">Site simples para um trabalho da faculdade.</p>
                 </div>
-
-            </div>
-
+            </a>
 
         </div>
     </section>
 
-    <section id="Contato" class="contato">
+    <section id="contato" class="contato">
         <h2 class="contato-titulo">Entre em Contato</h2>
         <form class="formulario-contato" id="formulario" onsubmit="EnviarWhats(event)">
-
             <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form" id="Nome">
+                <input placeholder="Nome" class="campo-form" id="nome">
             </div>
-
             <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="Mensagem"></textarea>
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
             </div>
-
             <button type="submit" class="botao-form">Enviar WhatsApp</button>
-
         </form>
-
-
     </section>
 
     <script>
-
         function EnviarWhats(event) {
-
-            event.preventDefault()
-            const nome = document.getElementById('nome')
-            const mensagem = document.getElementById('mensagem')
-            const telefone = '5511985658712'
-
-            const texto = `Olá, meu nome é ${nome}, ${mensagem}`
-            const msgFormatada = encodeURIComponent(texto)
-
-            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
-
-            console.log(url)
-
-            window.open(url, '_blanck')
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5511985658712';
+            const texto = `Olá, meu nome é ${nome}, ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+            window.open(url, '_blank');
         }
-
-
     </script>
-
-
 </body>
 
 </html>
